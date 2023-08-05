@@ -64,10 +64,6 @@ public class Controller implements ActionListener, DocumentListener {
                     }
                 }
 
-                // display the current transition (start)
-                currentTransition = currentState.getText() + "," + input.charAt(0);
-                machineGUI.updateTransitionLabel(currentTransition);
-
                 // disable the run button and the text field
                 machineGUI.enableRunBtn(false);
                 machineGUI.enableInputTF(false);
@@ -109,6 +105,10 @@ public class Controller implements ActionListener, DocumentListener {
 
                     System.out.println(transition);
 
+                    // display current state (current state -> next state)
+                    currentTransition = currentState.getText() + " -> " + transitionNextState;
+                    machineGUI.updateTransitionLabel(currentTransition);
+
                     // MOVE THE CURRENT STATE TO THE NEXT STATE
                     machineGUI.transitionToNextState(transitionCurrState, transitionNextState, startState);
                     // for each state in statesGUI (and assign the next state to be the current state)
@@ -140,21 +140,12 @@ public class Controller implements ActionListener, DocumentListener {
 
             System.out.println("accept state: " + machineGUI.getAcceptState() + " curr state: " + currentState.getText());
 
-            // display the current transition
-            currentTransition = currentState.getText() + "," + singleInput;
-            machineGUI.updateTransitionLabel(currentTransition);
 
             if (currentState.getText().equals(machineGUI.getAcceptState())) {
                 JOptionPane.showMessageDialog(null, "Accepted!", "Accepted", JOptionPane.INFORMATION_MESSAGE);
-                // display the current transition
-                currentTransition = currentState.getText() + "," + singleInput;
-                machineGUI.updateTransitionLabel(currentTransition);
                 resetProgram();
             } else if (currentState.getText().equals(machineGUI.getRejectState())) {
                 JOptionPane.showMessageDialog(null, "Rejected!", "Error", JOptionPane.ERROR_MESSAGE);
-                // display the current transition
-                currentTransition = currentState.getText() + "," + singleInput;
-                machineGUI.updateTransitionLabel(currentTransition);
                 resetProgram();
             }
 
