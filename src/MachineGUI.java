@@ -43,6 +43,17 @@ public class MachineGUI extends JFrame {
     public String rejectState;
     public ArrayList<String> transitionFunctions;
 
+    /**
+     * Default constructor for Machine GUI
+     * @param states array of states based on machine definition
+     * @param inputSymbols array of input symbols
+     * @param leftEndMarker left end marker
+     * @param rightEndMarker right end marker
+     * @param startState initial state
+     * @param acceptState accept / final state
+     * @param rejectState reject state
+     * @param transitionFunctions transition functions
+     */
     public MachineGUI(String[] states, String[] inputSymbols, String leftEndMarker, String rightEndMarker,
                      String startState, String acceptState, String rejectState,
                       ArrayList<String> transitionFunctions) {
@@ -66,7 +77,9 @@ public class MachineGUI extends JFrame {
         this.setVisible(true);
     }
 
-
+    /**
+     * This function layouts the components of the GUI
+     */
     public void layoutComponents() {
 
         // center panel with GridBagLayout
@@ -224,6 +237,10 @@ public class MachineGUI extends JFrame {
         this.add(panelCenter, BorderLayout.CENTER);
     }
 
+    /**
+     * this function sets the value of the read head
+     * @param readHead the value to be set
+     */
     public void setReadHead(int readHead) {
         this.readHead.setText(String.valueOf(readHead));
     }
@@ -276,6 +293,30 @@ public class MachineGUI extends JFrame {
      */
     public String getStartState() {
         return startState;
+    }
+
+    /**
+     * this function returns the left end marker
+     * @return the left end marker value
+     */
+    public String getLeftEndMarker() {
+        return leftEndMarker;
+    }
+
+    /**
+     * this function returns the right end marker
+     * @return the right end marker value
+     */
+    public String getRightEndMarker() {
+        return rightEndMarker;
+    }
+
+    /**
+     * this function returns the reject state
+     * @return the reject state
+     */
+    public String getRejectState() {
+        return rejectState;
     }
 
     /**
@@ -384,16 +425,4 @@ public class MachineGUI extends JFrame {
         }
     }
 
-
-    public String getLeftEndMarker() {
-        return leftEndMarker;
-    }
-
-    public String getRightEndMarker() {
-        return rightEndMarker;
-    }
-
-    public String getRejectState() {
-        return rejectState;
-    }
 }
