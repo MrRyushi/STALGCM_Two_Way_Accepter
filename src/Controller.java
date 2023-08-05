@@ -36,6 +36,9 @@ public class Controller implements ActionListener, DocumentListener {
         // get string input from text field
         String input = machineGUI.getInputTF();
 
+        // string for current transition
+        String currentTransition;
+
         // get the needed elements from machineGUI
         JLabel[] statesGUI = machineGUI.getStatesGUI();
         ArrayList<String> transitionFunctions = machineGUI.getTransitionFunctions();
@@ -60,6 +63,11 @@ public class Controller implements ActionListener, DocumentListener {
                         currHeadPosition = 0;
                     }
                 }
+
+                // display the current transition (start)
+                currentTransition = currentState.getText() + "," + input.charAt(0);
+                machineGUI.updateTransitionLabel(currentTransition);
+
                 // disable the run button and the text field
                 machineGUI.enableRunBtn(false);
                 machineGUI.enableInputTF(false);
@@ -131,11 +139,22 @@ public class Controller implements ActionListener, DocumentListener {
             }
 
             System.out.println("accept state: " + machineGUI.getAcceptState() + " curr state: " + currentState.getText());
+
+            // display the current transition
+            currentTransition = currentState.getText() + "," + singleInput;
+            machineGUI.updateTransitionLabel(currentTransition);
+
             if (currentState.getText().equals(machineGUI.getAcceptState())) {
                 JOptionPane.showMessageDialog(null, "Accepted!", "Accepted", JOptionPane.INFORMATION_MESSAGE);
+                // display the current transition
+                currentTransition = currentState.getText() + "," + singleInput;
+                machineGUI.updateTransitionLabel(currentTransition);
                 resetProgram();
             } else if (currentState.getText().equals(machineGUI.getRejectState())) {
                 JOptionPane.showMessageDialog(null, "Rejected!", "Error", JOptionPane.ERROR_MESSAGE);
+                // display the current transition
+                currentTransition = currentState.getText() + "," + singleInput;
+                machineGUI.updateTransitionLabel(currentTransition);
                 resetProgram();
             }
 
@@ -187,6 +206,7 @@ public class Controller implements ActionListener, DocumentListener {
 
         return found; // Return true if all characters are found, otherwise false
     }
+
 
 
     @Override

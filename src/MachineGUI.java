@@ -30,6 +30,9 @@ public class MachineGUI extends JFrame {
     // String input text field
     public JTextField inputTF;
 
+    // Label for current transition
+    public JLabel currentTransitionLabel;
+
     // The following came from the input file
     public String[] states;
     public String[] inputSymbols;
@@ -198,6 +201,9 @@ public class MachineGUI extends JFrame {
         JLabel readHeadLabel = new JLabel("Read Head Position: ");
         readHeadLabel.setFont(new Font("Roboto", Font.BOLD, 25));
 
+        // add a label for the current transition
+        currentTransitionLabel = new JLabel();
+        currentTransitionLabel.setFont(new Font("Roboto", Font.BOLD, 25));
 
         // add a new south panel with FlowLayout to place buttons next to each other
         JPanel panelSouth = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
@@ -206,6 +212,9 @@ public class MachineGUI extends JFrame {
         panelSouth.add(inputTF);
         panelSouth.add(readHeadLabel);
         panelSouth.add(readHead);
+
+        // add the current transition label
+        panelSouth.add(currentTransitionLabel);
 
         // Add the north panel to the NORTH of the BorderLayout
         this.add(panelNorth, BorderLayout.NORTH);
@@ -338,6 +347,15 @@ public class MachineGUI extends JFrame {
                 state.setForeground(Color.ORANGE);
             }
         }
+    }
+
+    /**
+     * Helper function to update the current transition label
+     * @param currentTransition the current state and the current input
+     * @return the current transition
+     */
+    public void updateTransitionLabel(String currentTransition) {
+        currentTransitionLabel.setText("Current Transition: " + currentTransition);
     }
 
     /**
