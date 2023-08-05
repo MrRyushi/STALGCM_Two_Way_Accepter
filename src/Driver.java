@@ -1,10 +1,17 @@
+/**
+ * STALGCM Case Study
+ * @author Ernest Balderosa
+ * @author Samantha Caasi
+ * @author John Marcellana
+ */
+
 import javax.swing.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Driver class of Two Way Deterministic Finite State Accepter /
+ * Driver class of Two Way Deterministic Finite State Accepter
  */
 public class Driver {
     public static String [] states;
