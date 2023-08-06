@@ -1,6 +1,11 @@
 # STALGCM_Case_Study
 This repository contains the Case Study (Machine Project) for the course Advance Algorithms and Complexities (STALGCM)
 
+# Authors
+Ernest Balderosa <br>
+Samantha Caasi <br>
+John Marcellana <br>
+
 # Chosen Model of Computation
 Two-Way Finite Accepter / Two-Way: Deterministic Finite Automata
 
