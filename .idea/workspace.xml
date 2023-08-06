@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64e22ca3-d190-41ff-8991-d49ebb82ef48" name="Changes" comment="two-way accepters">
+    <list default="true" id="64e22ca3-d190-41ff-8991-d49ebb82ef48" name="Changes" comment="added names on introductory comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MachineGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MachineGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample_input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,21 @@
       <option name="project" value="LOCAL" />
       <updated>1690907986032</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added names on introductory comment">
+      <created>1691240285583</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691240285583</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added names on introductory comment">
+      <created>1691240300793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691240300793</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="two-way accepters" />
-    <option name="LAST_COMMIT_MESSAGE" value="two-way accepters" />
+    <MESSAGE value="added names on introductory comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="added names on introductory comment" />
   </component>
 </project>

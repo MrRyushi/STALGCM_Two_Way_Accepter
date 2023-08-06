@@ -138,13 +138,12 @@ public class Controller implements ActionListener, DocumentListener {
 
             }
 
-            System.out.println("accept state: " + machineGUI.getAcceptState() + " curr state: " + currentState.getText());
+            int inputLength = input.length();
 
-
-            if (currentState.getText().equals(machineGUI.getAcceptState())) {
+            if (currentState.getText().equals(machineGUI.getAcceptState()) && currHeadPosition == inputLength-1) {
                 JOptionPane.showMessageDialog(null, "Accepted!", "Accepted", JOptionPane.INFORMATION_MESSAGE);
                 resetProgram();
-            } else if (currentState.getText().equals(machineGUI.getRejectState())) {
+            } else if (currentState.getText().equals(machineGUI.getRejectState()) && currHeadPosition == inputLength-1) {
                 JOptionPane.showMessageDialog(null, "Rejected!", "Error", JOptionPane.ERROR_MESSAGE);
                 resetProgram();
             }

@@ -22,3 +22,11 @@ D,a,D,L
 E,a,E,L
 D,b,E,L
 E,b,D,L
+G,<,G,R
+G,a,G,R
+G,b,G,R
+G,>,G,L
+F,<,F,R
+F,a,F,R
+F,b,F,R
+F,>,F,L
