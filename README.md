@@ -24,6 +24,9 @@ B        -- reject state <br>
 A,a,B,R  -- transition function 1 <br>
 B,a,C,R  -- transition function 2 <br>
 C,a,A,R  -- transition function 3 <br>
+   .
+   .
+   .
 A,b,A,R  -- transition function n <br>
 
 # Sample Machine Definition
