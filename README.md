@@ -51,5 +51,11 @@ D,a,D,L <br>
 E,a,E,L <br>
 D,b,E,L <br>
 E,b,D,L <br>
- 
-
+G,<,G,R <br>
+G,a,G,R <br>
+G,b,G,R <br>
+G,>,G,L <br>
+F,<,F,R <br>
+F,a,F,R <br>
+F,b,F,R <br>
+F,>,F,L <br>
